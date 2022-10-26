@@ -6,6 +6,8 @@ import java.util.Scanner;
 
 public class CalculadoraMain {
 
+// vai dar conflito!!
+
     public static void main(String[] args) {
 
         Scanner entrada = new Scanner(System.in);
