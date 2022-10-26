@@ -1,7 +1,7 @@
 package br.com.letscode.turmaitau;
 
 
-public class PrimeraClasse {
+public class PrimeiraClasse {
 
     //esse é um metodo de inicializaçao
     public static void main(String[] args) {
