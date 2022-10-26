@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class CalculadoraMain {
 
-// vai dar conflito!!
+// Testando pull request
 
     public static void main(String[] args) {
 
