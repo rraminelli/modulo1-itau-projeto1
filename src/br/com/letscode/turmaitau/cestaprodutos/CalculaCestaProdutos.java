@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class CalculaCestaProdutos {
 
-    private final static int QTDE_MAX_PRODUTOS = 5;
+    public final static int QTDE_MAX_PRODUTOS = 5;
 
     Scanner scanner;
     RecuperarDadosProduto recuperarDadosProduto = null;

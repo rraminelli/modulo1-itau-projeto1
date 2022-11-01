@@ -6,7 +6,7 @@ import java.util.Objects;
     Toda classe herda é filha da classe PAI Object
  */
 
-public class Carro extends Object {
+public class CarroSemEncapsulamento extends Object {
 
     //atributos
     /*
@@ -16,41 +16,24 @@ public class Carro extends Object {
         protected
         default
      */
-    private String marca;
-    private String modelo;
-    private String placa;
-    private String cor;
+    String marca;
+    String modelo;
+    String placa;
+    String cor;
     //se uso a classe Integer (classe wrapper de int) a inicializacao é sempre NULL
-    private Integer anoFabricacao = null;
+    Integer anoFabricacao = null;
 
     //se uso o primitivo a inicializacao é sempre "= false", é mesma coisa que "boolean ligado = false;"
-    private boolean ligado;
+    boolean ligado;
 
     //se uso o primitivo a inicializacao é sempre "= 0", é mesma coisa que "int velocidade = 0;"
-    private Integer velocidade;
+    Integer velocidade;
 
     //construtor padrao
     /*public Carro() {
 
     }*/
 
-    public Carro(String marca, String modelo, Integer anoFabricacao) {
-        this(marca, modelo, "", "", anoFabricacao);
-        //continua...
-    }
-
-    public Carro(String marca, String modelo, String placa, String cor, Integer anoFabricacao) {
-        this.setMarca(marca);
-        this.modelo = modelo;
-        this.setPlaca(placa);
-        this.setCor(cor);
-        this.setAnoFabricacao(anoFabricacao);
-    }
-
-    //Carro zero, sem placa
-    public Carro(String marca, String modelo, String cor, Integer anoFabricacao) {
-        this(marca, modelo, "", cor, anoFabricacao);
-    }
 
 
     //metodo
@@ -117,60 +100,8 @@ public class Carro extends Object {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Carro carro = (Carro) o;
+        CarroSemEncapsulamento carro = (CarroSemEncapsulamento) o;
         return Objects.equals(marca, carro.marca) && Objects.equals(modelo, carro.modelo) && Objects.equals(placa, carro.placa) && Objects.equals(cor, carro.cor) && Objects.equals(anoFabricacao, carro.anoFabricacao);
-    }
-
-    public String getCor() {
-        if (cor == null) {
-            cor = "";
-        }
-        return cor;
-    }
-
-    public void setCor(String cor) {
-        if (cor == null) {
-            cor = "";
-        }
-        this.cor = cor.toUpperCase();
-    }
-
-    public String getMarca() {
-        return marca;
-    }
-
-    private void setMarca(String marca) {
-        if (marca != null) {
-            this.marca = marca;
-        }
-    }
-
-    public String getModelo() {
-        return modelo;
-    }
-
-    public String getPlaca() {
-        return placa;
-    }
-
-    public void setPlaca(String placa) {
-        if (placa != null && (placa.length() == 7 || placa.length() == 8)) {
-            this.placa = placa;
-        }
-    }
-
-    public Integer getAnoFabricacao() {
-        return anoFabricacao;
-    }
-
-    private void setAnoFabricacao(Integer anoFabricacao) {
-        if (anoFabricacao != null && anoFabricacao > 1950) {
-            this.anoFabricacao = anoFabricacao;
-        }
-    }
-
-    public void imprimirMarca() {
-        System.out.println("marca = " + marca);
     }
 
 }

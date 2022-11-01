@@ -7,7 +7,7 @@ public class CarroMain {
     public static void main(String[] args) {
 
         //criacao do objeto carro audi
-        Carro audi = new Carro();
+        CarroSemEncapsulamento audi = new CarroSemEncapsulamento();
         audi.modelo = "A1";
         audi.marca = "Audi";
         audi.cor = "Branco";
@@ -17,7 +17,7 @@ public class CarroMain {
         audi.acelerar();
 
         //criacao do objeto carro nissao
-        Carro nissan = new Carro();
+        CarroSemEncapsulamento nissan = new CarroSemEncapsulamento();
         nissan.modelo = "March";
         nissan.marca = "Nissan";
         nissan.cor = "Branco";
@@ -39,10 +39,10 @@ public class CarroMain {
 
         System.out.println( "audi = nissan? " + nissan.equals(audi) );
 
-        Carro golBranco = new Carro();
+        CarroSemEncapsulamento golBranco = new CarroSemEncapsulamento();
         golBranco.modelo = new String("Gol");
 
-        Carro golPreto = new Carro();
+        CarroSemEncapsulamento golPreto = new CarroSemEncapsulamento();
         golPreto.modelo = "Gol";
 
         System.out.println( "modelo golBranco = golPreto? " + (golPreto.equals(golBranco) ));

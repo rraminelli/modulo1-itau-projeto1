@@ -1,17 +1,16 @@
 package br.com.letscode.turmaitau.carros;
 
-import java.util.Arrays;
 
 public class CarroMain2 {
 
     public static void main(String[] args) {
 
-        Carro golBranco = new Carro();
+        CarroSemEncapsulamento golBranco = new CarroSemEncapsulamento();
         golBranco.modelo = new String("Gol");
         //se incluir a cor os objetos ficam diferentes
         //golBranco.cor = "Branco";
 
-        Carro golPreto = new Carro();
+        CarroSemEncapsulamento golPreto = new CarroSemEncapsulamento();
         golPreto.modelo = "Gol";
         //se incluir a cor os objetos ficam diferentes
         //golPreto.cor = "Preto";
@@ -43,11 +42,11 @@ public class CarroMain2 {
             System.out.println("sao diferentes");
         }
 
-        if ( golBranco instanceof Carro ) {
+        if ( golBranco instanceof CarroSemEncapsulamento ) {
             System.out.println("golBranco é um carro");
         }
 
-        if ( golPreto instanceof Carro ) {
+        if ( golPreto instanceof CarroSemEncapsulamento ) {
             System.out.println("golPreto é um carro");
         }
 
