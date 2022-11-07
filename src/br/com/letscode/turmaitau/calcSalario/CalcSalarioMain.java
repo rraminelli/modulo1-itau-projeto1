@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 
 public class CalcSalarioMain {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         Funcionario funcionario = new Funcionario("Rodrigo", "12345678", BigDecimal.valueOf(1500));
 

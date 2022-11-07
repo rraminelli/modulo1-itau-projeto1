@@ -16,12 +16,16 @@ public class Funcionario {
         this.salarioBase = salarioBase;
     }
 
-    public BigDecimal calcularSalario(int diasTrabalhados) {
+    public BigDecimal calcularSalario(int diasTrabalhados) throws ValidacaoException {
+
+        if (diasTrabalhados <= 0) {
+            throw new ValidacaoException("0001", "Dias trabalhados devem ser maiores que zero.");
+        }
 
         BigDecimal salarioCalculado =
-                salarioBase.divide(BigDecimal.valueOf(30))
+                salarioBase.divide(BigDecimal.valueOf(30), 4, RoundingMode.HALF_EVEN)
                         .multiply(BigDecimal.valueOf(diasTrabalhados))
-                        .setScale(2, RoundingMode.UP);
+                        .setScale(2, RoundingMode.HALF_EVEN);
 
         return salarioCalculado;
 
