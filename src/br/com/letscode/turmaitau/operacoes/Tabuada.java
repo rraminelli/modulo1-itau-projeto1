@@ -1,6 +1,10 @@
 package br.com.letscode.turmaitau.operacoes;
 
-public class Tabuada {
+import br.com.letscode.turmaitau.interfaces.PrimeiraInterface;
+
+import java.io.Serializable;
+
+public class Tabuada extends Object implements OperacaoInterface, Serializable {
 
     public void realizarOperacao(double multiplicando, double limiteMultiplicador) {
 

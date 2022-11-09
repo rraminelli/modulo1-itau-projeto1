@@ -1,7 +1,7 @@
 package br.com.letscode.turmaitau;
 
-import br.com.letscode.turmaitau.carros.Carro;
-import br.com.letscode.turmaitau.operacoes.*;
+import br.com.letscode.turmaitau.operacoes.CriarOperacao;
+import br.com.letscode.turmaitau.operacoes.OperacaoInterface;
 
 import java.util.Scanner;
 
@@ -24,38 +24,9 @@ public class CalculadoraMain {
 
         String operador = entrada.next();
 
-        switch (operador) {
-            case "+":
-                Somar somar = new Somar();
-                somar.realizarOperacao(numero1, numero2);
-                break;
-            case "-":
-                new Subtrair().realizarOperacao(numero1, numero2);
-                break;
-            case "/":
-                new Dividir().realizarOperacao(numero1, numero2);
-                break;
-            case "x":
-                new Multiplicar().realizarOperacao(numero1, numero2);
-                break;
-            case "t":
-                new Tabuada().realizarOperacao(numero1, numero2);
-                break;
-            default:
-                System.out.printf("Operador invalido!!!");
-                break;
-        }
+        OperacaoInterface operacaoInterface = new CriarOperacao().criarOperacao(operador);
 
-        /*if (operacao == 1) {
-            System.out.printf("Resultado: %.2f + %.2f = %.2f %s ", numero1, numero2, (numero1 + numero2), "!");
-        } else if (operacao == 2) {
-            System.out.printf("Resultado: %.2f + %.2f = %.2f %s ", numero1, numero2, (numero1 - numero2), "!");
-        } else if (operacao == 3) {
-            System.out.printf("Resultado: %.2f / %.2f = %.2f %s ", numero1, numero2, (numero1 / numero2), "!");
-        } else if (operacao == 4) {
-            System.out.printf("Resultado: %.2f x %.2f = %.2f %s ", numero1, numero2, (numero1 * numero2), "!");
-        }*/
-
+        operacaoInterface.realizarOperacao(numero1, numero2);
 
 
     }

@@ -2,12 +2,13 @@ package br.com.letscode.turmaitau.contaBancaria.cliente;
 
 public class ClientePessoaFisica extends Cliente {
 
+    private String cpf;
+
     public ClientePessoaFisica(String nome, String cpf) {
         setNome(nome);
         this.cpf = cpf;
     }
 
-    private String cpf;
 
     public String getCpf() {
         return cpf;
